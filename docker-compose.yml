@@ -1,8 +1,6 @@
 services:
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
+    image: kistoo/onpe-backend:latest
     container_name: onpe-backend
     ports:
       - "3000:3000"
@@ -17,11 +15,7 @@ services:
       retries: 3
 
   frontend:
-    build:
-      context: ./frontend
-      dockerfile: Dockerfile
-      args:
-        VITE_API_URL: ""   # nginx proxy; vacío = relative URL en producción
+    image: kistoo/onpe-frontend:latest
     container_name: onpe-frontend
     ports:
       - "8080:80"
