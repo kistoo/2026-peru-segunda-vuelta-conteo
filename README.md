@@ -1,7 +1,6 @@
 # ONPE 2026 — Resultados Segunda Vuelta Presidencial
 
 Proyecto fullstack para visualizar en tiempo real los resultados del API oficial de ONPE.
-Desarrollado como portfolio / CV showcasing React, TypeScript, NestJS y Docker.
 
 ---
 
