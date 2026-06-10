@@ -1,0 +1,44 @@
+# Dependencias
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Scripts de exploración/debug (no forman parte del proyecto)
+debug*.py
+probe*.py
+check_ubigeo.py
+onpe_actas_pendientes.py
+onpe_contador_actas.py
+onpe_conteo_completo.py
+onpe_estimador.py
+onpe_github.py
+onpe_resumen_final.py
+onpe_votos_jee.py
+resumen_rapido.py
+server.py
+resultados.html
+
+# Variables de entorno (contienen rutas locales / secretos)
+.env
+backend/.env
+frontend/.env
+
+# Builds
+backend/dist/
+frontend/dist/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Docker
+.docker/
