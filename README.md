@@ -72,15 +72,47 @@ npm run dev
 
 ---
 
-## Producción con Docker
+## Instalación rápida con Docker
+
+> Solo necesitas tener **Docker Desktop** instalado. No requiere Node.js ni Python.
+
+### Opción A — Desde Docker Hub (recomendado)
 
 ```bash
-# Construir y levantar todos los servicios
-docker-compose up --build
+# Descargar el docker-compose.yml
+curl -O https://raw.githubusercontent.com/kistoo/onpe-resultados/main/docker-compose.yml
 
-# Frontend → http://localhost
-# Backend  → http://localhost:3000
+# Levantar (descarga las imágenes automáticamente)
+docker compose up
 ```
+
+### Opción B — Desde el código fuente
+
+```bash
+git clone https://github.com/kistoo/onpe-resultados
+cd onpe-resultados
+docker compose up --build
+```
+
+Abrir en el navegador: **`http://localhost:8080`**
+
+| Servicio | URL |
+|---|---|
+| Frontend (React + nginx) | `http://localhost:8080` |
+| Backend API (NestJS) | `http://localhost:3000/resultados` |
+
+```bash
+# Detener
+docker compose down
+
+# Actualizar a la última versión
+docker compose pull && docker compose up
+```
+
+### Imágenes publicadas en Docker Hub
+
+- [`kistoo/onpe-backend`](https://hub.docker.com/r/kistoo/onpe-backend)
+- [`kistoo/onpe-frontend`](https://hub.docker.com/r/kistoo/onpe-frontend)
 
 ---
 
